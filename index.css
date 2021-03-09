@@ -71,7 +71,7 @@ body {
 	background-color: hsl(0, 0%, 100%);
 	margin: 0 auto;
 	border-radius: 2%;
-	box-shadow: 0px 15px 20px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 15px 20px 2px rgba(133, 143, 173, 0.1);
 	display: flex;
 	flex-direction: column;
 }
@@ -88,10 +88,30 @@ body {
 	display: flex;
 }
 
-.card__bulletPoints {
-	background-color: blue;
+.card__bulletPointsContainer {
 	height: 136px;
 	flex: 0.5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card__bulletPoints ul {
+	padding: 0;
+	list-style-image: url("./images/icon-check.svg");
+}
+
+.card__bulletPoints li {
+	margin-top: 8px;
+	font-family: Manrope;
+	font-weight: 600;
+	font-size: 12px;
+	color: hsl(225, 20%, 60%);
+}
+
+.card__bulletPoints li span {
+	position: relative;
+	left: 8px;
 }
 
 .card__trialButtonContainer {
@@ -117,6 +137,6 @@ body {
 	top: 25%;
 	color: hsl(226, 100%, 87%);
 	font-family: Manrope;
-	font-weight: 600;
-	font-size: 14px;
+	font-weight: 800;
+	font-size: 12px;
 }
