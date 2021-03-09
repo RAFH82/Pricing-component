@@ -11,6 +11,9 @@ body {
 	background-repeat: no-repeat;
 }
 
+/* Top of page 
+////////////// */
+
 .header {
 	height: 265px;
 }
@@ -65,6 +68,12 @@ body {
 	right: -45px;
 }
 
+/* End of top of page 
+////////////// */
+
+/* Card Content 
+////////////// */
+
 .card {
 	width: 530px;
 	height: 400px;
@@ -75,6 +84,9 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+/* Top of Card 
+////////////// */
 
 .card__header {
 	width: 100%;
@@ -140,15 +152,130 @@ body {
 	color: hsl(225, 20%, 60%);
 }
 
+/* Card Slider 
+////////////// */
+
 .card__sliderContainer {
 	height: 88px;
 	background-color: yellow;
 }
 
+/* Middle of Card
+////////////// */
+
 .card__billingContainer {
 	height: 88px;
-	background-color: aqua;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
 }
+
+.card__billing {
+	margin-right: 68px;
+	width: 100%;
+	height: 20px;
+	display: flex;
+	justify-content: flex-end;
+	font-family: Manrope;
+	position: absolute;
+	top: 26px;
+}
+
+.card__billingPeriod {
+	font-size: 12px;
+	font-weight: 600;
+	color: hsl(225, 20%, 60%);
+}
+
+.card__billingDiscount {
+	text-align: center;
+	background-color: hsl(14, 92%, 95%);
+	border-radius: 10px;
+	height: 18px;
+	width: 80px;
+	margin-left: 10px;
+}
+
+.card__billingDiscount > p {
+	margin: 0;
+	position: relative;
+	font-size: 10px;
+	top: 12.5%;
+	color: hsl(15, 100%, 70%);
+}
+
+/* Start of Billing Slider 
+////////////// */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 43px;
+	height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: hsl(223, 50%, 87%);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 14px;
+	width: 14px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: hsl(223, 50%, 87%);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px hsl(223, 50%, 87%);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(22px);
+	-ms-transform: translateX(22px);
+	transform: translateX(22px);
+}
+
+/* Rounded sliders] */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* End of Billing Slider 
+////////////// */
+
+/* Bottom of Card 
+////////////// */
 
 .card__footer {
 	border-top: 1px solid hsla(223, 50%, 87%, 0.3);
