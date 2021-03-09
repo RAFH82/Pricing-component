@@ -96,13 +96,13 @@ body {
 	position: relative;
 }
 
-.card__dynamicTextLeft {
-	margin-bottom: 5px;
+.card__dynamicTextPageViews {
+	margin-bottom: 10px;
 	position: absolute;
 	left: 55px;
 	font-family: Manrope;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 800;
 	letter-spacing: 2px;
 	color: hsl(225, 20%, 60%);
 }
@@ -110,7 +110,34 @@ body {
 .card__dynamicTextContainerRight {
 	height: 88px;
 	flex: 0.5;
-	background-color: blue;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: relative;
+}
+
+.card__dynamicText {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	top: 41px;
+	right: 55px;
+	margin-bottom: 0;
+}
+
+.card__dynamicTextPrice {
+	font-family: Manrope;
+	font-size: 40px;
+	font-weight: 800;
+	color: hsl(227, 35%, 25%);
+}
+
+.card__dynamicTextBillingPeriod {
+	margin-left: 6px;
+	font-family: Manrope;
+	font-size: 15px;
+	font-weight: 600;
+	color: hsl(225, 20%, 60%);
 }
 
 .card__sliderContainer {
