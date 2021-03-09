@@ -70,4 +70,17 @@ body {
 	margin: 0 auto;
 	border-radius: 2%;
 	box-shadow: 0px 15px 20px 2px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+}
+
+.card__header {
+	width: 100%;
+	height: 264px;
+}
+
+.card__footer {
+	border-top: 1px solid hsla(223, 50%, 87%, 0.3);
+	width: 100%;
+	height: 136px;
 }
