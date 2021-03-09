@@ -80,7 +80,7 @@ body {
 	background-color: hsl(0, 0%, 100%);
 	margin: 0 auto;
 	border-radius: 2%;
-	box-shadow: 0px 15px 20px 2px rgba(133, 143, 173, 0.1);
+	box-shadow: 0px 15px 20px 2px rgba(133, 143, 173, 0.2);
 	display: flex;
 	flex-direction: column;
 }
@@ -209,6 +209,11 @@ body {
 ////////////// */
 
 /* The switch - the box around the slider */
+
+label {
+	margin: 0 10px 0 10px;
+}
+
 .switch {
 	position: relative;
 	display: inline-block;
