@@ -162,11 +162,12 @@ body {
 	align-items: center;
 }
 
-input[type="range"] {
+/* input[type="range"] {
 	-webkit-appearance: none;
 	height: 8px;
 	margin: 10px 0;
 	flex: 0.82;
+	display: flex;
 	overflow: hidden;
 	background-color: hsl(224, 65%, 95%);
 	border-radius: 25px;
@@ -179,11 +180,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 	height: 8px;
 	cursor: pointer;
 	border-radius: 25px;
+	background-color: hsl(224, 65%, 95%);
 }
 input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	background: hsl(174, 86%, 45%);
-	box-shadow: -200px 0px 0px 200px hsl(174, 77%, 80%);
+	box-shadow: -210px 0px 0px 200px hsl(174, 77%, 80%);
 	height: 40px;
 	width: 40px;
 	border-radius: 25px;
@@ -192,7 +194,80 @@ input[type="range"]::-webkit-slider-thumb {
 	background-position: center;
 	cursor: pointer;
 	margin-top: -16px;
+} */
+
+input[type="range"].styled-slider {
+	-webkit-appearance: none;
+	height: 42px;
+	flex: 0.82;
 }
+
+/*progress support*/
+input[type="range"].styled-slider.slider-progress {
+	--range: calc(var(--max) - var(--min));
+	--ratio: calc((var(--value) - var(--min)) / var(--range));
+	--sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
+	margin-top: 18px;
+}
+
+input[type="range"].styled-slider:focus {
+	outline: none;
+}
+
+/*webkit*/
+input[type="range"].styled-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	background: hsl(174, 86%, 45%);
+	border: none;
+	box-shadow: 0 15px 20px 8px hsla(174, 86%, 45%, 0.3);
+	margin-top: -15px;
+	background-image: url("./images/icon-slider.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+input[type="range"].styled-slider::-webkit-slider-runnable-track {
+	height: 8px;
+	border-radius: 25px;
+	background: hsl(224, 65%, 95%);
+	box-shadow: none;
+}
+
+input[type="range"].styled-slider.slider-progress::-webkit-slider-runnable-track {
+	background: linear-gradient(hsl(174, 77%, 80%), hsl(174, 77%, 80%)) 0 /
+			var(--sx) 100% no-repeat,
+		hsl(224, 65%, 95%);
+}
+/* input[type="range"].styled-slider::-webkit-slider-thumb:hover {
+	background: #0061c3;
+} */
+
+/* input[type="range"].styled-slider:hover::-webkit-slider-runnable-track {
+	background: #e5e5e5;
+	border-color: #9a9a9a;
+} */
+
+/* input[type="range"].styled-slider::-webkit-slider-thumb:active {
+	background: #2f98f9;
+} */
+
+/* input[type="range"].styled-slider:active::-webkit-slider-runnable-track {
+	background: #f5f5f5;
+	border-color: #c1c1c1;
+} */
+
+/* input[type="range"].styled-slider.slider-progress:hover::-webkit-slider-runnable-track {
+	background: linear-gradient(#0061c3, #0061c3) 0 / var(--sx) 100% no-repeat,
+		#e5e5e5;
+}
+
+input[type="range"].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
+	background: linear-gradient(#2f98f9, #2f98f9) 0 / var(--sx) 100% no-repeat,
+		#f5f5f5;
+} */
 
 /* Middle of Card
 ////////////// */
