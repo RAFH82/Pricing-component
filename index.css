@@ -208,6 +208,14 @@ input[type="range"].styled-slider::-webkit-slider-thumb {
 	background-image: url("./images/icon-slider.svg");
 	background-repeat: no-repeat;
 	background-position: center;
+	cursor: pointer;
+}
+
+input[type="range"].styled-slider::-webkit-slider-thumb:active {
+	background: hsl(174, 87%, 35%);
+	background-image: url("./images/icon-slider.svg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 input[type="range"].styled-slider::-webkit-slider-runnable-track {
@@ -292,6 +300,7 @@ label {
 }
 
 /* The slider */
+
 .slider {
 	position: absolute;
 	cursor: pointer;
@@ -317,7 +326,7 @@ label {
 }
 
 input:checked + .slider {
-	background-color: hsl(223, 50%, 87%);
+	background-color: hsl(174, 77%, 80%);
 }
 
 input:focus + .slider {
@@ -330,7 +339,8 @@ input:checked + .slider:before {
 	transform: translateX(22px);
 }
 
-/* Rounded sliders] */
+/* Rounded sliders */
+
 .slider.round {
 	border-radius: 34px;
 }
