@@ -420,3 +420,62 @@ input:checked + .slider:before {
 	font-weight: 800;
 	font-size: 12px;
 }
+
+/* @media only screen and (max-width: 500px) {
+	.header__title {
+		width: 375px;
+	}
+
+	.header__title > h2 {
+		font-size: 22px;
+	}
+
+	.header__title > h4 {
+
+	}
+
+	.card {
+		width: 375px;
+		height: 558px;
+	}
+	.card__footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		height: 200px;
+		position: relative;
+		top: 58px;
+	}
+
+	.card__bulletPointsContainer {
+		position: relative;
+		width: 60%;
+		top: 16px;
+	}
+
+	.card__bulletPoints {
+		left: 46px;
+	}
+
+	.card__bulletPoints li {
+		font-size: 14px;
+		line-height: 1.6em;
+	}
+
+	.card__trialButtonContainer {
+		position: relative;
+		width: 75%;
+		top: 20px;
+	}
+
+	.card__trialButton {
+		height: 46px;
+		width: 200px;
+	}
+
+	.card__trialButton > p {
+		top: 30%;
+		font-size: 14px;
+	}
+} */
