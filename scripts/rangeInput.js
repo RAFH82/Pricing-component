@@ -1,3 +1,4 @@
+// Logic for Range Input styling
 for (let e of document.querySelectorAll(
 	'input[type="range"].slider-progress'
 )) {
@@ -7,37 +8,32 @@ for (let e of document.querySelectorAll(
 	e.addEventListener("input", () => e.style.setProperty("--value", e.value));
 }
 
-let pageViews = document.querySelector(".card__dynamicTextPageViews");
-let sliderProgress = document.querySelector('input[value="3"].slider-progress');
-let textPrice = document.querySelector(".card__dynamicTextPrice");
-let billingType = document.querySelector("#billingType");
+// Logic for changing plans based on range input
+const input = document.querySelector("#rangeInput");
+const views = document.querySelector("#views");
+const price = document.querySelector("#price");
+const annually = document.querySelector("#annually");
 
-sliderProgress.addEventListener("change", (e) => {
-	let billingChecked = billingType.checked;
+const plans = [
+	{ views: "10K", price: (8.0).toFixed(2), discount: (6.0).toFixed(2) },
+	{ views: "50K", price: (12.0).toFixed(2), discount: (9.0).toFixed(2) },
+	{ views: "100K", price: (16.0).toFixed(2), discount: (12.0).toFixed(2) },
+	{ views: "500K", price: (24.0).toFixed(2), discount: (18.0).toFixed(2) },
+	{ views: "1M", price: (36.0).toFixed(2), discount: (27.0).toFixed(2) },
+];
 
-	switch (Number(sliderProgress.value)) {
-		case 1:
-			pageViews.innerHTML = "10K PAGEVIEWS";
-			textPrice.innerHTML = billingChecked ? "$6.00" : "$8.00";
-			break;
-		case 2:
-			pageViews.innerHTML = "50K PAGEVIEWS";
-			textPrice.innerHTML = billingChecked ? "$9.00" : "$12.00";
-			break;
-		case 3:
-			pageViews.innerHTML = "100K PAGEVIEWS";
-			textPrice.innerHTML = billingChecked ? "$12.00" : "$16.00";
-			break;
-		case 4:
-			pageViews.innerHTML = "500K PAGEVIEWS";
-			textPrice.innerHTML = billingChecked ? "$22.00" : "$24.00";
-			break;
-		case 5:
-			pageViews.innerHTML = "1M PAGEVIEWS";
-			textPrice.innerHTML = billingChecked ? "$27.00" : "$36.00";
-			break;
-		default:
-			pageViews.innerHTML = "100K PAGEVIEWS";
-			textPrice.innerHTML = "$16.00";
-	}
-});
+input.oninput = function () {
+	views.innerHTML = plans[this.value].views;
+
+	annually.checked
+		? (price.innerHTML = plans[this.value].discount)
+		: (price.innerHTML = plans[this.value].price);
+};
+
+// Listen for changes on price toggle
+document.addEventListener("change", changePrice);
+
+function changePrice(event) {
+	if (!event.target.closest(".switch")) return;
+	input.oninput();
+}

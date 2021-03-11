@@ -47,11 +47,15 @@
 				<div class="card__header">
 					<div class="card__dynamicTextContainer">
 						<div class="card__dynamicTextContainerLeft">
-							<div class="card__dynamicTextPageViews">100K PAGEVIEWS</div>
+							<div class="card__dynamicTextLeft">
+								<div class="card__dynamicTextPageAmount" id="views">100K</div>
+								<div class="card__dynamicTextPageViews">PAGEVIEWS</div>
+							</div>
 						</div>
 						<div class="card__dynamicTextContainerRight">
-							<div class="card__dynamicText">
-								<div class="card__dynamicTextPrice">$16.00</div>
+							<div class="card__dynamicTextRight">
+								<div class="card__dynamicTextPrice">$</div>
+								<div class="card__dynamicTextPrice" id="price">16.00</div>
 								<div class="card__dynamicTextBillingPeriod">/ month</div>
 							</div>
 						</div>
@@ -59,18 +63,18 @@
 					<div class="card__sliderContainer">
 						<input
 							type="range"
-							min="1"
-							max="5"
-							value="3"
+							min="0"
+							max="4"
+							value="2"
 							class="styled-slider slider-progress"
-							id="myRange"
+							id="rangeInput"
 						/>
 					</div>
 					<div class="card__billingContainer">
 						<div class="card__billing">
 							<span class="card__billingPeriod">Monthly Billing</span
 							><label class="switch">
-								<input type="checkbox" id="billingType" name="billing" />
+								<input type="checkbox" id="annually" name="annually" />
 								<span class="slider round"></span></label
 							><span class="card__billingPeriod">Yearly Billing</span>
 							<div class="card__billingDiscount"><p>25% discount</p></div>
