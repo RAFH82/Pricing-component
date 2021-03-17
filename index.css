@@ -409,6 +409,7 @@ input:checked + .slider:before {
 	text-align: center;
 	background-color: hsl(227, 35%, 25%);
 	cursor: pointer;
+	transition: opacity 0.5s 0s ease;
 }
 
 .card__trialButton > p {
@@ -419,6 +420,10 @@ input:checked + .slider:before {
 	font-family: Manrope;
 	font-weight: 800;
 	font-size: 12px;
+}
+
+.card__trialButton:hover {
+	opacity: 0.8;
 }
 
 /* @media only screen and (max-width: 500px) {
